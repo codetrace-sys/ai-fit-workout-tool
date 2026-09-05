@@ -1,0 +1,16 @@
+# Python
+__pycache__/
+*.py[cod]
+*.egg-info/
+
+# 虚拟环境
+venv/
+.env
+
+# 数据文件（含个人信息）
+plans.json
+
+# IDE
+.vscode/
+.idea/
+.DS_Store

@@ -1,0 +1,95 @@
+/* 1. 全局盒模型统一：所有元素 border/padding 不会撑大盒子 */
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  /* 核心盒模型，所有项目通用 */
+  box-sizing: border-box;
+}
+
+/* 2. html根元素：设置基础字体大小，用于rem相对单位，平滑滚动 */
+html {
+  /* 基础字号，1rem = 16px，可后续业务按需修改 */
+  font-size: 16px;
+  /* 页面平滑滚动 */
+  scroll-behavior: smooth;
+}
+
+/* 3. body全局文字基础样式 */
+body {
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+  /* 基础行高，提升阅读舒适度 */
+  line-height: 1.5;
+  /* 基础文字颜色，仅默认，业务页面可覆盖 */
+  color: #333;
+  /* 清除body默认外边距 */
+  background-color: #f5f7fa;
+}
+
+/* 4. 链接a标签：取消默认下划线、默认蓝色，保留指针手势 */
+a {
+  text-decoration: none;
+  color: inherit; /* 继承父级文字颜色，去掉浏览器默认蓝色 */
+  cursor: pointer;
+}
+
+/* 5. 列表 ul ol：清除默认列表符号、默认内边距 */
+ul,
+ol {
+  list-style: none;
+}
+
+/* 6. 图片、媒体元素：自适应，防止图片溢出父容器，取消图片底部缝隙 */
+img,
+video {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+/* 7. 表单元素统一基础：继承字体，去除部分浏览器默认样式 */
+input,
+button,
+textarea,
+select {
+  /* 表单控件默认不继承字体，手动继承body字体 */
+  font-family: inherit;
+  font-size: inherit;
+  /* 去除默认边框、轮廓，业务页面再自定义 */
+  border: none;
+  outline: none;
+}
+
+/* 按钮取消默认点击轮廓，鼠标手型 */
+button {
+  cursor: pointer;
+  background-color: transparent;
+}
+
+/* 8. textarea禁止拖拽水平拉伸，只允许垂直拉伸 */
+textarea {
+  resize: vertical;
+}
+
+/* 9. 标题组：清除浏览器默认margin，字号权重业务页面自行覆盖 */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-weight: normal;
+  font-size: inherit;
+}
+
+/* 10. 段落p：清除默认上下外边距 */
+p {
+  margin: 0;
+}
+
+/* 11. 表格重置：合并边框，取消默认间距 */
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}

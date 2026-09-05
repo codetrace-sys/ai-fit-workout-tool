@@ -1,0 +1,344 @@
+/* 容器 */
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 30px 20px;
+}
+
+/* 标题 */
+.header {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.header h1 {
+    font-size: 36px;
+    color: #2c3e50;
+    margin-bottom: 10px;
+}
+
+.header p {
+    font-size: 24px;
+    color: #666;
+    margin-bottom: 20px;
+}
+
+/* 卡片通用样式 */
+.card {
+    background: #fff;
+    border-radius: 12px;
+    box-shadow: 0 2px 12px rgba(0, 0, 0, 0.06);
+    padding: 24px;
+    margin-bottom: 20px;
+}
+
+/* 表单 Flex 响应式布局 */
+.form-grid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 18px;
+}
+
+.form-item {
+    flex: 1 1 260px;
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+}
+
+.form-item label {
+    font-size: 14px;
+    color: #555;
+    font-weight: 500;
+}
+
+.form-item input,
+.form-item select {
+    padding: 10px 12px;
+    border: 1px solid #dcdfe6;
+    border-radius: 8px;
+    font-size: 14px;
+    outline: none;
+    transition: border-color 0.2s;
+}
+
+.form-item input:focus,
+.form-item select:focus {
+    border-color: #409eff;
+}
+
+.form-item input.invalid,
+.form-item select.invalid {
+    border-color: #f56c6c;
+}
+
+.field-error {
+    color: #f56c6c;
+    font-size: 12px;
+    line-height: 1;
+}
+
+/* 按钮区 */
+.btn-group {
+    display: flex;
+    gap: 12px;
+    margin-bottom: 20px;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.btn {
+    padding: 10px 22px;
+    border: none;
+    border-radius: 8px;
+    font-size: 15px;
+    cursor: pointer;
+    transition: opacity 0.2s;
+}
+
+.btn-yes {
+    background-color: #409eff;
+    color: #fff;
+}
+
+.btn-no {
+    background-color: #ecf5ff;
+    color: #409eff;
+}
+
+.btn:hover {
+    opacity: 0.85;
+}
+
+.btn:disabled,
+.btn-loading {
+    opacity: 0.6;
+    cursor: not-allowed;
+}
+
+/* 结果展示区 */
+#result {
+    min-height: 120px;
+    white-space: pre-wrap;
+    font-size: 14px;
+    color: #333;
+    line-height: 1.8;
+    text-align: center;
+}
+
+/* 历史记录 */
+#historyBox {
+    margin-top: 10px;
+}
+
+.history-item {
+    border: 1px solid #ebeef5;
+    border-radius: 8px;
+    padding: 14px;
+    margin-bottom: 12px;
+}
+
+.history-time {
+    font-size: 13px;
+    color: #909399;
+    margin-bottom: 8px;
+}
+
+.history-content {
+    white-space: pre-wrap;
+    font-size: 13px;
+    color: #606266;
+}
+
+/* ============= 计划展示区 ============= */
+.plan-title {
+    font-size: 18px;
+    color: #2c3e50;
+    margin-bottom: 16px;
+}
+
+.day-card {
+    background: #fff;
+    border: 1px solid #ebeef5;
+    border-radius: 8px;
+    padding: 14px;
+    margin-bottom: 16px;
+}
+
+.day-header {
+    font-size: 16px;
+    font-weight: 600;
+    color: #303133;
+    margin-bottom: 12px;
+}
+
+.day-focus {
+    color: #909399;
+    font-size: 14px;
+    font-weight: normal;
+}
+
+.type-tag {
+    background: #409eff;
+    color: #fff;
+    padding: 2px 8px;
+    border-radius: 4px;
+    font-size: 12px;
+    margin-left: 8px;
+    vertical-align: middle;
+}
+
+.type-tag.rest {
+    background: #909399;
+}
+
+.exercise-table {
+    padding: 0;
+    margin: 0;
+    list-style: none;
+}
+
+.exercise-head {
+    display: flex;
+    background: #ecf5ff;
+    color: #409eff;
+    font-weight: 600;
+    padding: 8px 12px;
+    border-radius: 6px;
+    margin-bottom: 6px;
+    font-size: 14px;
+}
+
+.exercise-row {
+    display: flex;
+    padding: 8px 12px;
+    border-bottom: 1px solid #ebeef5;
+    font-size: 14px;
+    color: #303133;
+}
+
+.exercise-row:nth-child(even) {
+    background: #fafafa;
+}
+
+.col-name {
+    flex: 2;
+}
+
+.col-sets {
+    flex: 1;
+    text-align: center;
+}
+
+.col-reps {
+    flex: 1;
+    text-align: center;
+}
+
+.col-rest {
+    flex: 1;
+    text-align: center;
+}
+
+.col-note {
+    flex: 2;
+    color: #909399;
+}
+
+.rest-hint {
+    color: #909399;
+    font-size: 14px;
+    padding: 8px 0;
+}
+
+/* ============= 历史记录页 ============= */
+.history-list-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 16px;
+}
+
+.history-list-header .count {
+    font-size: 14px;
+    color: #666;
+}
+
+.history-summary-list {
+    padding: 0;
+    margin: 0;
+    list-style: none;
+}
+
+.history-summary {
+    padding: 16px;
+    border: 1px solid #ebeef5;
+    border-radius: 8px;
+    margin-bottom: 12px;
+    background: #fafbfc;
+}
+
+.history-summary-meta {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 12px;
+}
+
+.history-summary-title {
+    font-size: 16px;
+    font-weight: 600;
+    color: #303133;
+    margin-bottom: 6px;
+}
+
+.history-summary-sub {
+    font-size: 13px;
+    color: #909399;
+}
+
+.history-summary-actions {
+    display: flex;
+    gap: 8px;
+}
+
+.empty-hint {
+    text-align: center;
+    padding: 40px 20px;
+    color: #909399;
+}
+
+.empty-hint .icon {
+    font-size: 48px;
+    margin-bottom: 12px;
+}
+
+.empty-hint .text {
+    font-size: 16px;
+    margin-bottom: 16px;
+}
+
+.detail-actions {
+    margin-bottom: 16px;
+}
+
+.detail-actions .btn {
+    margin-left: 12px;
+}
+
+.detail-actions .btn:first-child {
+    margin-left: 0;
+}
+
+/* ============= 状态提示（加载/错误） ============= */
+.status-loading {
+    color: #909399;
+    font-size: 14px;
+}
+
+.status-error {
+    color: #f56c6c;
+    font-size: 14px;
+    margin-bottom: 8px;
+}

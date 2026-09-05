@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI健身计划制定</title>
+
+    <link rel="stylesheet" href="base.css">
+    <link rel="stylesheet" href="common.css">
+</head>
+
+<body>
+    <div class="container">
+        <!-- 标题 -->
+        <header class="header">
+            <h1>AI健身计划制定</h1>
+            <p>欢迎使用AI健身计划制定工具！</p>
+        </header>
+        <!-- 表单卡片 -->
+        <div class="card">
+            <div class="form-grid">
+                <div class="form-item">
+                    <label>身高 (cm)</label>
+                    <input type="number" id="height" min="50" max="250" placeholder="请输入身高">
+                </div>
+                <div class="form-item">
+                    <label>体重 (kg)</label>
+                    <input type="number" id="weight" min="20" max="200" placeholder="请输入体重">
+                </div>
+                <div class="form-item">
+                    <label>年龄</label>
+                    <input type="number" min="5" max="120" id="age" placeholder="请输入年龄">
+                </div>
+                <div class="form-item">
+                    <label>健身目标</label>
+                    <select id="target">
+                        <option value="增肌">增肌</option>
+                        <option value="减脂">减脂</option>
+                        <option value="力量">力量提升</option>
+                    </select>
+                </div>
+                <div class="form-item">
+                    <label>每周训练天数</label>
+                    <input type="number" min="1" max="6" id="days" placeholder="如：4">
+                </div>
+                <div class="form-item">
+                    <label>训练经验</label>
+                    <select id="exp">
+                        <option value="新手">新手</option>
+                        <option value="有一点基础">有一点基础</option>
+                        <option value="健身老手">健身老手</option>
+                    </select>
+                </div>
+                <div class="form-item" style="flex: 1 1 100%;">
+                    <label>可用器械</label>
+                    <input type="text" id="tool" placeholder="如：哑铃、杠铃、健身房、只有自重">
+                </div>
+            </div>
+        </div>
+        <div class="card">
+            <!-- 按钮组 -->
+            <div class="btn-group">
+                <button class="btn btn-yes" id="generateBtn">生成健身计划</button>
+                <button class="btn btn-no" id="saveBtn">保存计划</button>
+                <button class="btn btn-no" id="showHistory">查看历史计划</button>
+            </div>
+            <!-- 结果区域 -->
+            <div id="result">
+            </div>
+        </div>
+    </div>
+</body>
+<script src="main.js"></script>
+
+</html>
